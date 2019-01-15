@@ -1,15 +1,25 @@
 <template>
   <div class="about">
-    <h1>What is a Crypto-Currency?</h1>
+    <h1>List of songs</h1>
     <p>
-      It's a digital currency in which encryption techniques are used to regulate the generation of units of currency
-      and verify the transfer of funds, operating independently of a central bank.
+      This should hopefully be a list of songs avaliable
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About'
+  name: 'About',
+  mounted: function () {
+    window.addEventListener('keydown', this.keydown)
+  },
+  methods: {
+    keydown: function (evt) {
+        if (evt.key == 'Escape') {
+          this.$router.push('/');
+
+        }
+   }
+}
 }
 </script>
