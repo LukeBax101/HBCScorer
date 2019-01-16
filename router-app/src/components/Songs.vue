@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="songs">
     <h1>List of songs</h1>
     <p>
       This should hopefully be a list of songs avaliable
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'About',
+  name: 'Songs',
   mounted: function () {
     window.addEventListener('keydown', this.keydown)
   },
@@ -17,7 +17,6 @@ export default {
     keydown: function (evt) {
         if (evt.key == 'Escape') {
           this.$router.push('/');
-
         }
    }
 }
