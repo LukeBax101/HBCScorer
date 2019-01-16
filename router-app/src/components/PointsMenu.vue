@@ -21,7 +21,6 @@
   position: fixed;
   bottom: 0%;
   right: 0%;
-
 }
 
 .show-points-enter,

@@ -1,6 +1,7 @@
 # hbc_scorer
 
 > Scorer for Holiday Bible Club
+All images must be jpg
 
 #
 
@@ -24,7 +25,7 @@
 
 # build for production with minification
 
-	
+
 npm run build
 
 

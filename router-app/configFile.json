@@ -1,0 +1,21 @@
+{
+    "songs": {
+        "song1": 4,
+        "song2": 4,
+        "song3": 4,
+        "song4": 4,
+        "song5": 4,
+        "song6": 4
+    },
+    "dates": {
+      "day1": "The datetime formatted string",
+      "day2": "The datetime formatted string",
+      "day3": "The datetime formatted string",
+      "evening": "The datetime formatted string"
+    },
+    "teams": {
+      "team1": "red",
+      "team2": "white",
+      "team3": "blue"
+    }
+}

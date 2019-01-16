@@ -1,5 +1,3 @@
-
-
 <template>
   <transition name="show-songs">
     <div v-if="show" class="songs-menu">
@@ -16,7 +14,7 @@
 </template>
 
 <script>
-  import Config from '../../config.json'
+  import Config from '../../configFile.json'
   export default {
     name: 'SongsMenu',
     data() {
@@ -27,20 +25,12 @@
     },
     props: ['show'],
     mounted: function () {
-      console.log(JSON.stringify(this.songList));
-      window.addEventListener('keydown', this.keydown);
+        window.addEventListener('keydown', this.keydown);
+        this.selected = 0;
     },
     watch: {
-      	show: function(newVal, oldVal) { // watch it
-
-          if (newVal && !oldVal) {
-
+      	show: function(newVal, oldVal) {
             this.selected = 0;
-                //alert(`songs-list-item-${this.selected-1}`);
-                //alert(document.getElementById(`songs-list-item-${this.selected-1}`));
-                //document.getElementById(`songs-list-item-${this.selected-1}`).classList.add('songs-list-items__item--active')
-
-          }
         }
     },
     methods: {
@@ -62,10 +52,13 @@
                   this.updateActive(prevSelected);
                 }
             } else if (evt.key == 'Enter') {
-              alert(`Play: ${this.songList[this.selected-1]}`);
+              document.getElementById(`songs-list-item-${prevSelected-1}`).classList.remove('songs-list-items__item--active')
+              prevSelected = this.selected;
+              this.selected= 0;
+              this.$parent.songMenu = false;
+              this.$parent.songs = false;
+              this.$router.push( `/songs/${this.songList[prevSelected-1]}/1`);
             }
-            console.log(this.selected);
-
           }
 
      },
@@ -76,8 +69,6 @@
          }
          document.getElementById(`songs-list-item-${this.selected-1}`).classList.add('songs-list-items__item--active')
        }
-
-
      }
   }
   }

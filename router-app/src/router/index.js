@@ -13,7 +13,7 @@ export default new Router({
       component: Welcome
     },
     {
-      path: '/songs',
+      path: '/songs/:songName/:slideNo',
       name: 'Songs',
       component: Songs
     }
