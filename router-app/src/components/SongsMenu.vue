@@ -63,7 +63,7 @@
 
      },
      updateActive(prevSelected) {
-       if (this.seleceted != prevSelected) {
+       if (this.selected != prevSelected) {
          if (prevSelected > 0) {
              document.getElementById(`songs-list-item-${prevSelected-1}`).classList.remove('songs-list-items__item--active')
          }
@@ -94,9 +94,16 @@
   border-radius: 4px;
 }
 
+.songs-list-items__item {
+  transition: all 100ms ease-out;
+  transition-property: font-weight, font-size, font-style;
+}
+
 .songs-list-items__item--active {
-          background-color: red;
-          border-radius: 4px;
+
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
 }
 
 ol {
