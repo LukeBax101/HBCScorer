@@ -15,16 +15,28 @@ export default {
       if (evt.key == 'q' || evt.key == 'Q') {
           this.fullscreen();
       }
+      if (evt.key == 'Escape') {
+        evt.preventDefault();
+      }
       else if (document.getElementById('welcome-screen')) {
         if (evt.key == 's' || evt.key == 'S') {
             this.songs = !this.songs;
             this.points = false;
-        } else if (evt.key == 'Escape') {
+        } else if (evt.key == 'e' || evt.key == 'E') {
             this.songs = false;
             this.points = false;
         } else if (evt.key == 'p' || evt.key == 'P') {
           this.points = !this.points;
           this.songs = false;
+        }  else if (evt.key == 'r' || evt.key == 'R') {
+          if ((document.fullscreenElement && document.fullscreenElement !== null) ||
+           (document.webkitFullscreenElement && document.webkitFullscreenElement !== null) ||
+           (document.mozFullScreenElement && document.mozFullScreenElement !== null) ||
+           (document.msFullscreenElement && document.msFullscreenElement !== null)) {
+            this.songs = false;
+            this.points = false;
+            this.$router.push('/race');
+          }
         }
       }
    },

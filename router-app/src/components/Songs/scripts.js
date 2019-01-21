@@ -19,7 +19,7 @@ export default {
   methods: {
     keydown: function (evt) {
         if (document.getElementById('song-screen')) {
-          if (evt.key == 'Escape') {
+          if (evt.key == 'e' || evt.key == 'E') {
             this.songMenu = false;
             this.$router.push('/');
           } else if (evt.key == 's' || evt.key == 'S') {

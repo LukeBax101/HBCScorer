@@ -44,6 +44,8 @@ export default {
 
               } else if ((evt.key == 'Enter' || evt.key == 'Tab' || evt.key == 'ArrowRight') && this.teamSelected != 0) {
                   this.stage = this.stage+1;
+                  document.getElementById("teams-list").classList.remove('teams-list--active');
+                  document.getElementById("operator-list").classList.add('operator-list--active');
               }
           } else if (this.stage == 1 && this.getValue() == '') {
               var prevOperatorSelected = this.operatorSelected;
@@ -57,10 +59,13 @@ export default {
 
               } else if ((evt.key == 'Enter' || evt.key == 'Tab' || evt.key == 'ArrowRight') && this.operatorSelected != 0) {
                   this.stage = this.stage+1;
+                  document.getElementById("operator-list").classList.remove('operator-list--active');
                   document.getElementById("points-value").focus()
 
               } else if (evt.key == 'Backspace' || evt.key == 'ArrowLeft') {
                   this.stage = this.stage-1;
+                  document.getElementById("operator-list").classList.remove('operator-list--active');
+                  document.getElementById("teams-list").classList.add('teams-list--active');
               }
           } else if (this.stage == 2) {
               if (evt.key == 'Enter' && this.getValue() != '') {
@@ -71,12 +76,14 @@ export default {
                   this.teamSelected = 0;
                   this.operatorSelected = 0;
                   this.stage = 0;
+                  document.getElementById("teams-list").classList.add('teams-list--active');
                   document.getElementById("points-value").blur();
                   document.getElementById("points-value").value = '';
 
               } else if ((evt.key == 'Backspace' || evt.key == 'ArrowLeft') && this.getValue() == '') {
                   this.stage = this.stage-1;
                   document.getElementById("points-value").blur()
+                  document.getElementById("operator-list").classList.add('operator-list--active');
               }
           }
         }

@@ -23,12 +23,21 @@
   height:94%;
   width:94%;
   margin:3%;
-  border-radius: 4px;
   margin-top: auto;
   margin-bottom:auto;
   margin-left: 5px;
   margin-right: 5px;
   padding: 5px;
+  border-radius: 7px;
+}
+
+.teams-list--active {
+  border: 2px solid #dadada;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+  transition: all 300ms ease-out;
+  transition-property: border, outline, border-color, box-shadow;
 }
 
 .teams-list-items__item {
@@ -48,12 +57,21 @@
   height:94%;
   width:94%;
   margin:3%;
-  border-radius: 4px;
   margin-top: auto;
   margin-bottom:auto;
   margin-left: 5px;
   margin-right: 5px;
   padding: 5px;
+  border-radius: 7px;
+}
+
+.operator-list--active {
+  border: 2px solid #dadada;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+  transition: all 300ms ease-out;
+  transition-property: border, outline, border-color, box-shadow;
 }
 
 .operator-list-items__item {
@@ -92,6 +110,14 @@ h3 {
 
 }
 
-.input {
+input {
   cursor: none;
+  border: 2px solid #dadada;
+  border-radius: 7px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
 }

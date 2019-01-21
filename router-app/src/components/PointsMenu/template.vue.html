@@ -2,14 +2,14 @@
   <div v-if="show" class="points-menu" id="points-menu">
     <h3> Points</h3>
     <div class="points-options">
-      <div class="teams-list">
+      <div id="teams-list" class="teams-list teams-list--active">
         <ul id="teamsList" class="teams-list-items">
             <li v-for="(item,index) in teamList" :id="`teams-list-item-${index}`" :style="col(item)" class="teams-list-items__item">
             {{ item }}
             </li>
         </ul>
       </div>
-      <div class="operator-list">
+      <div id="operator-list" class="operator-list">
         <ul id="operatorList" class="operator-list-items">
             <li v-for="(item,index) in operatorList" :id="`operator-list-item-${index}`" class="operator-list-items__item">
             {{ item }}
