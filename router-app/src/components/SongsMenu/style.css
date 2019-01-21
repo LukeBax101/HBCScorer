@@ -1,0 +1,51 @@
+.songs-menu {
+
+  width: 20vw;
+  background: grey;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.songs-list {
+  background: white;
+  height:94%;
+  width:94%;
+  margin:3%;
+  border-radius: 4px;
+}
+
+.songs-list-items__item {
+  transition: all 100ms ease-out;
+  transition-property: font-weight, font-size, font-style;
+}
+
+.songs-list-items__item--active {
+
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+ol {
+  margin:0;
+}
+h3 {
+  margin:10px;
+}
+.show-songs-enter,
+.show-songs-leave-to {
+  opacity: 0;
+}
+
+.show-songs-enter-to,
+.show-songs-leave {
+  opacity: 1;
+}
+
+.show-songs-enter-active,
+.show-songs-leave-active {
+  transition: opacity 500ms ease-out;
+}

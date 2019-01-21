@@ -1,11 +1,4 @@
-<template>
-  <div class="songs" :style="backImage" id="song-screen">
-    <songs-menu :show="songMenu"></songs-menu>
-  </div>
-</template>
-
-<script>
-import Config from '../../configFile.json'
+import Config from '../../../configFile.json'
 export default {
   name: 'Songs',
   data() {
@@ -52,13 +45,3 @@ export default {
    }
  }
 }
-</script>
-
-<style>
-.songs {
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-}
-
-</style>

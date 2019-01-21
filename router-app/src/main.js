@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import SongsMenu from './components/SongsMenu.vue'
-import PointsMenu from './components/PointsMenu.vue'
+import SongsMenu from './components/SongsMenu'
+import PointsMenu from './components/PointsMenu'
 Vue.config.productionTip = false
 
 // define

@@ -1,0 +1,12 @@
+<transition name="show-songs">
+  <div v-if="show" class="songs-menu">
+    <h3>Holiday Bible Club Songs</h3>
+    <div class="songs-list">
+    <ol id="songsList" class="songs-list-items">
+        <li v-for="(item,index) in songList" :id="`songs-list-item-${index}`" class="songs-list-items__item">
+        {{ item }}
+        </li>
+    </ol>
+  </div>
+  </div>
+</transition>

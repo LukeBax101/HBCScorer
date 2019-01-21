@@ -1,0 +1,97 @@
+.points-menu {
+  background: grey;
+  position: fixed;
+  bottom: 0%;
+  right: 0%;
+  border-top-left-radius: 10px;
+  border-color: black;
+  border-width: 10px;
+}
+
+.points-options-value {
+  margin: auto;
+  padding: 5px;
+}
+
+.points-options {
+  display: flex;
+}
+
+
+.teams-list {
+  background: grey;
+  height:94%;
+  width:94%;
+  margin:3%;
+  border-radius: 4px;
+  margin-top: auto;
+  margin-bottom:auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.teams-list-items__item {
+  transition: all 100ms ease-out;
+  transition-property: font-weight, font-size, font-style;
+}
+
+.teams-list-items__item--active {
+
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.operator-list {
+  background: grey;
+  height:94%;
+  width:94%;
+  margin:3%;
+  border-radius: 4px;
+  margin-top: auto;
+  margin-bottom:auto;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.operator-list-items__item {
+  transition: all 100ms ease-out;
+  transition-property: font-weight, font-size, font-style;
+}
+
+.operator-list-items__item--active {
+
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+ul {
+  margin:0;
+  list-style-type: none;
+  padding: 0;
+}
+h3 {
+  margin:10px;
+}
+
+.show-points-enter,
+.show-points-leave-to {
+  opacity: 0;
+}
+
+.show-points-enter-to,
+.show-points-leave {
+  opacity: 1;
+}
+
+.show-points-enter-active,
+.show-points-leave-active {
+  transition: opacity 500ms ease-out;
+
+}
+
+.input {
+  cursor: none;
+}
